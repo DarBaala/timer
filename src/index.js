@@ -6,19 +6,25 @@ const form = document.getElementById("form");
 const reset = document.getElementById("reset");
 const start = document.getElementById("start");
 
+reset.disabled = true;
+
 let allSeconds = 0;
 
-const format = (seconds) => {
-  let s = (seconds % 60).toString();
-  let m = Math.floor((seconds / 60) % 60).toString();
-  let h = Math.floor((seconds / 60 / 60) % 60).toString();
-  return `${h.padStart(2, "0")}:${m.padStart(2, "0")}:${s.padStart(2, "0")}`;
+const format = (s) => {
+  let seconds = (s % 60).toString();
+  let minutes = Math.floor((s / 60) % 60).toString();
+  let hours = Math.floor((s / 60 / 60) % 60).toString();
+  return `${hours.padStart(2, "0")}:${minutes.padStart(
+    2,
+    "0"
+  )}:${seconds.padStart(2, "0")}`;
 };
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   if (input.value) {
     start.disabled = true;
+    reset.disabled = false;
     let arr = input.value.split(":");
     let hours = arr[0];
     let minutes = arr[1];
@@ -42,6 +48,7 @@ form.addEventListener("submit", (event) => {
       input.value = "";
       time.textContent = "00:00:00";
       start.disabled = false;
+      reset.disabled = true;
     });
   } else {
     alert("Заполните время!");

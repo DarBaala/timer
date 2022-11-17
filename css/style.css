@@ -12,6 +12,10 @@ body {
   flex-direction: column;
   padding: 20px;
 }
+.timer__wrapper {
+  display: flex;
+  align-items: center;
+}
 
 form {
   display: flex;
@@ -32,6 +36,7 @@ input {
   color: #fff;
   border: none;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 input[type="time"]::-webkit-calendar-picker-indicator {
@@ -65,6 +70,7 @@ button {
 }
 button[disabled] {
   opacity: 0.5;
+  cursor: not-allowed;
 }
 
 #reset {
