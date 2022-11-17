@@ -1,3 +1,71 @@
 body {
-  background-color: antiquewhite;
+  background-color: #c9c9d7;
+  font-family: sans-serif;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+.timer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  font-size: 48px;
+  color: #fffcf4;
+}
+input {
+  padding: 10px;
+  background-color: #41418c;
+  color: #fff;
+  border: none;
+  margin-right: 20px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background: none;
+}
+input[type="time"] {
+  z-index: 0;
+  position: relative;
+  outline: 0;
+}
+input[type="time"]:after {
+  cursor: pointer;
+  content: "";
+  background-image: url("/img/icon.svg");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  z-index: -1;
+  position: absolute;
+  right: 10px;
+}
+button {
+  height: 40px;
+  cursor: pointer;
+  color: #fffcf4;
+  padding: 10px 44px;
+  font-size: 18px;
+  border: none;
+  background-color: #2e8d3a;
+}
+#stop {
+  width: 245px;
+  margin: 20px auto;
+  background-color: #802424;
+}
+#reset {
+  width: 245px;
+  margin: auto;
+  background-color: #60408a;
 }
