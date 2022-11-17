@@ -10,19 +10,23 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 50px;
+  padding: 20px;
 }
 
 form {
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 245px;
+  margin: auto;
 }
 h1 {
   font-size: 48px;
+  text-align: center;
   color: #fffcf4;
 }
 input {
+  max-height: 40px;
   padding: 10px;
   background-color: #41418c;
   color: #fff;
@@ -51,7 +55,7 @@ input[type="time"]:after {
   right: 10px;
 }
 button {
-  height: 40px;
+  max-height: 40px;
   cursor: pointer;
   color: #fffcf4;
   padding: 10px 44px;
