@@ -18,6 +18,7 @@ const format = (seconds) => {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   if (input.value) {
+    start.disabled = true;
     let arr = input.value.split(":");
     let hours = arr[0];
     let minutes = arr[1];
