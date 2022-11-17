@@ -41,7 +41,6 @@ form.addEventListener("submit", (event) => {
         start.disabled = true;
         --allSeconds;
         time.textContent = format(allSeconds);
-        input.value = time.textContent;
       }
     }, 1000);
     reset.addEventListener("click", () => {
