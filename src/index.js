@@ -3,8 +3,8 @@
 let input = document.getElementById("input");
 let time = document.getElementById("time");
 const form = document.getElementById("form");
-const stop = document.getElementById("stop");
 const reset = document.getElementById("reset");
+const start = document.getElementById("start");
 
 let allSeconds = 0;
 
@@ -28,19 +28,19 @@ form.addEventListener("submit", (event) => {
       if (allSeconds < 1) {
         clearInterval(upd);
         time.textContent = "Время вышло!";
+        start.disabled = false;
       } else {
+        start.disabled = true;
         --allSeconds;
         time.textContent = format(allSeconds);
         input.value = time.textContent;
       }
     }, 1000);
-    stop.addEventListener("click", () => {
-      clearInterval(upd);
-    });
     reset.addEventListener("click", () => {
       clearInterval(upd);
       input.value = "";
       time.textContent = "00:00:00";
+      start.disabled = false;
     });
   } else {
     alert("Заполните время!");

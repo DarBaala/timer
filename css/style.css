@@ -59,13 +59,12 @@ button {
   border: none;
   background-color: #2e8d3a;
 }
-#stop {
-  width: 245px;
-  margin: 20px auto;
-  background-color: #802424;
+button[disabled] {
+  opacity: 0.5;
 }
+
 #reset {
   width: 245px;
-  margin: auto;
+  margin: 20px auto 0;
   background-color: #60408a;
 }
