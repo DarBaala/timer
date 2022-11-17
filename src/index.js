@@ -35,6 +35,7 @@ form.addEventListener("submit", (event) => {
       if (allSeconds < 1) {
         clearInterval(upd);
         time.textContent = "Время вышло!";
+        reset.disabled = true;
         start.disabled = false;
       } else {
         start.disabled = true;
